@@ -1,0 +1,12 @@
+<ul class="nav justify-content-end">
+  <li class="nav-item">
+      <%= link_to "New Article", new_article_path %>
+  </li>
+</ul>
+<h1>Article</h1>
+<div class="container">
+  <% @article.each do |article| %>
+  <h2><%= link_to article[:title], article_path(article[:id]) %></h2>
+  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque illo nihil fugit repellendus porro odit minima reprehenderit nobis molestiae ut ea aspernatur, dicta quaerat! Non minus aut accusantium adipisci sunt.</p>
+  <% end %>
+</div>

@@ -1,0 +1,7 @@
+<%= link_to "Back", articles_path %>
+<h1>Post a article</h1>
+<%= simple_form_for(@article) do |article| %>
+    <%= article.input :title %>
+    <%= article.text_area :content, data: { editor: 'markdown' }, rows: 10%>
+    <%= article.submit %>
+<% end %>

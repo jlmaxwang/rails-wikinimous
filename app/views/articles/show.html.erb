@@ -1,0 +1,7 @@
+<h1>Single article</h1>
+<h2><%= @article.title %></h2>
+<button><%= link_to 'Delete',article_path(@article.id), data: {method: :delete, confirm: 'Delete?'} %>
+|<%= link_to "Update", edit_article_path(@article) %></button>
+<hr>
+<p><%= @article.content %></p>
+<%= link_to "Back to all article", articles_path %>
